@@ -6,9 +6,9 @@
 
 ## Changes done to the dataset:
 ### Change 1: 
-- What I noticed: The xlsx file showed a mismatch where cities (e.g, Bangalore) were mapped to incorrect states (e.g, Haryana) for almost all the records.
-- What I had to do: I prioritised the "City" column as the primary geographical unit because city names are more specific and less likely to be just placeholders in retail businesses.
-- What I did later: I implemented a custom mapping function to reconstruct the State and Region relationship using dictionaries and stored the cleaned data in a new xlsx file.
+- What I noticed: The xlsx file showed a mismatch where cities (e.g, Bangalore) were mapped to incorrect states and regions (e.g, Haryana, North) for almost all the records.
+- What I had to do: I prioritised the "State" and "Region" column as the primary geographical units because states and regions are linked to each other (e.g. Haryana and North), while the "City" value (for the same record -> "Bengaluru").
+- What I did later: I implemented a custom mapping function to reconstruct the City relationship using dictionaries and stored the cleaned data in a new xlsx file.
 - What happened later: Improved data accuracy to 100%, eliminating "Geographical Hallucinations" in the dataset.
 
 ## Tech Stack: 
